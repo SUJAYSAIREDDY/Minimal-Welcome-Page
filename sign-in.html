@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="fa-IR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+  /* ==============================
+     Custom Font Setup
+  ============================== */
+  @font-face {
+      font-family: shabnam;
+      src: url("font/Shabnam.woff2") format("woff2");
+      src: url("font/Shabnam.woff") format("woff");
+      src: url("font/Shabnam.eot") format("eot");
+      font-weight: normal;
+      font-style: normal;
+  }
+
+  /* ==============================
+     Reset & Global Styles
+  ============================== */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: shabnam;
+  }
+
+  body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url(img/background.png);
+      background-size: cover;
+      overflow: hidden;
+  }
+
+  /* ==============================
+     Login Box Styles
+  ============================== */
+  .login-box{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 440px;
+      height: 480px;
+      padding: 30px;
+  }
+
+  .login-header{
+      text-align: center;
+      margin: 20px 0 40px 0;
+  }
+
+  .login-header header{
+      color:  white;
+      font-size: 30px;
+      font-weight: 200;
+  }
+
+  .input-box .input-field{
+      width: 100%;
+      height: 60px;
+      font-size: 17px;
+      padding: 0 25px;
+      margin-bottom: 15px;
+      border-radius: 30px;
+      border: none;
+      background-color: whitesmoke;
+      box-shadow: 0px 5px 10px 1px rgba(0,0,0, 0.05);
+      outline: none;
+      transition: .3s;
+  }
+
+  ::placeholder{
+      font-weight: 200;
+      color: #222;
+  }
+
+  .input-field:focus{
+      width: 105%;
+  }
+
+  /* ==============================
+     Forgot Password & Remember Me
+  ============================== */
+  .forgot{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 35px;
+  }
+
+  section{
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: white;
+  }
+
+  #check{
+      margin-right: 10px;
+  }
+
+  a{
+      text-decoration: none;
+  }
+
+  a:hover{
+      text-decoration: underline;
+  }
+
+  section a{
+      color: white;
+  }
+
+  /* ==============================
+     Submit Button Styles
+  ============================== */
+  .input-submit{
+      position: relative;
+  }
+
+  .submit-btn{
+      width: 100%;
+      height: 60px;
+      background: #808080;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: .3s;
+  }
+
+  .input-submit label{
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      color: #fff;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+  }
+
+  .submit-btn:hover{
+      background-color: #222;
+      transform: scale(1.05,1);
+  }
+
+  .btn-text {
+      color: white;
+  }
+
+  /* ==============================
+     Sign-up Link Styles
+  ============================== */
+  .sign-up-link{
+      text-align: center;
+      font-size: 15px;
+      margin-top: 20px;
+  }
+
+  .sign-up-link a{
+      color: #999;
+      font-weight: 100;
+  }
+
+  .sign-up-link p {
+      color: #F8F8FF;
+      font-weight: 100;
+  }
+
+  /* ==============================
+     Animated Ring Background
+  ============================== */
+  .ring {
+      position: relative;
+      width: 530px;
+      height: 530px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .ring i {
+      position: absolute;
+      inset: 0;
+      border: 2px solid #999;
+      transition: 0.5s;
+  }
+
+  .ring i:nth-child(1) {
+      border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+      animation: animate 6s linear infinite;
+  }
+
+  .ring i:nth-child(2) {
+      border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+      animation: animate 4s linear infinite;
+  }
+
+  .ring i:nth-child(3) {
+      border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+      animation: animate2 10s linear infinite;
+  }
+
+  .ring:hover i {
+      filter: drop-shadow(0 0 20px var(--clr));
+  }
+
+  @keyframes animate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+  }
+
+  @keyframes animate2 {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+  }
+
+  /* ==============================
+     Login Form Layout
+  ============================== */
+  .login {
+      position: absolute;
+      width: 300px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .login h2 {
+      font-size: 2em;
+      color: #fff;
+  }
+
+  .login .inputBx {
+      position: relative;
+      width: 100%;
+  }
+
+  .login .inputBx input {
+      position: relative;
+      width: 100%;
+      padding: 12px 20px;
+      background: transparent;
+      border: 2px solid #fff;
+      border-radius: 40px;
+      font-size: 1.2em;
+      color: #fff;
+      box-shadow: none;
+      outline: none;
+  }
+
+  .login .inputBx input[type="submit"] {
+      width: 100%;
+      background: linear-gradient(45deg, #ff357a, #fff172);
+      border: none;
+      cursor: pointer;
+  }
+
+  .login .inputBx input::placeholder {
+      color: rgba(255, 255, 255, 0.75);
+  }
+
+  .login .links {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+  }
+
+  .login .links a {
+      color: #fff;
+      text-decoration: none;
+  }
+
+  /* ==============================
+     Custom Checkbox Styles
+  ============================== */
+  .checkbox-wrapper-49 input[type="checkbox"] {
+      display: none;
+      visibility: hidden;
+  } 
+
+  .checkbox-wrapper-49 {
+      --size: 45px;
+  }
+
+  .checkbox-wrapper-49 .block {
+      position: relative;
+      clear: both;
+      float: left;
+  }
+
+  .checkbox-wrapper-49 label {
+      width: var(--size);
+      height: calc(var(--size) / 2);
+      box-sizing: border-box;
+      border: 3px solid;
+      float: left;
+      border-radius: 100px;
+      position: relative;
+      cursor: pointer;
+      transition: .3s ease;
+      color: #808080;
+  }
+
+  .checkbox-wrapper-49 input[type=checkbox]:checked + label {
+      background: white;
+  }
+
+  .checkbox-wrapper-49 input[type=checkbox]:checked + label:before {
+      left: calc(var(--size) / 2);
+  }
+
+  .checkbox-wrapper-49 label:before {
+      transition: .3s ease;
+      content: '';
+      width: calc((var(--size) / 2) - 10px);
+      height: calc((var(--size) / 2) - 10px);
+      position: absolute;
+      background: white;
+      left: 2px;
+      top: 2px;
+      box-sizing: border-box;
+      border: 3px solid;
+      color: black;
+      border-radius: 100px;
+  }
+
+</style>
+<body>
+  <!-- ==============================
+       Animated Ring Background
+  ============================== -->
+  <div class="ring">
+      <i style="--clr:#808080;"></i>
+      <i style="--clr:#808080;"></i>
+      <i style="--clr:#808080;"></i>
+  </div>
+
+  <!-- ==============================
+       Login Form
+  ============================== -->
+  <div class="login">
+    <div class="login-box">
+        <div class="login-header">
+            <header>Login</header>
+        </div>
+
+        <!-- Email Input -->
+        <div class="input-box">
+            <input type="email" class="input-field" placeholder="Email" autocomplete="off" required>
+        </div>
+
+        <!-- Password Input -->
+        <div class="input-box">
+            <input type="password" class="input-field" placeholder="Password" autocomplete="off" required>
+        </div>
+
+        <!-- Remember Me & Forgot Password -->
+        <div class="forgot">
+            <section>
+              <div class="checkbox-wrapper-49">
+                <div class="block">
+                  <input data-index="0" id="cheap-49" type="checkbox" />
+                  <label for="cheap-49"></label>
+                </div>
+              </div>
+              <label for="check">Remember Me</label>
+            </section>
+            <section>
+                <a href="forgot.html">Forgot Password</a>
+            </section>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="input-submit">
+            <button class="submit-btn , btn-text" id="submit">Login</button>
+        </div>
+
+        <!-- Sign-up Link -->
+        <div class="sign-up-link">
+            <p>If you are not registered <a href="Sign-Up.html">Sign Up</a></p>
+        </div>
+    </div>
+  </div>
+
+</body>
+<script>
+  // ==============================
+  // Login Script
+  // ==============================
+  document.getElementById("submit").addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const emailInput = document.querySelector('input[type="email"]').value.trim();
+    const passwordInput = document.querySelector('input[type="password"]').value.trim();
+
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Find user with matching email and password
+    const matchedUser = users.find(user => user.email === emailInput && user.password === passwordInput);
+
+    if (matchedUser) {
+      // Store logged-in user for next page
+      localStorage.setItem("loggedInUser", JSON.stringify(matchedUser));
+      alert("Login successful!");
+      window.location.href = "welcome.html"; // Redirect to welcome page
+    } else {
+      alert("Email or password is incorrect.");
+    }
+  });
+</script>
+</html>
